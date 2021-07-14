@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Task.Models.MonthWiseProductSales>
+@{
+    ViewBag.Title = "Product Sales Report Month Wise";
+}
+<center>
+    <h2>
+        Product Sales Report MonthWise
+    </h2>
+    <br />
+    <br />
+    <table class="table table-bordered table-responsive table-hover table-striped ">
+        <tr>
+            <th>Month</th>
+            <th>Product Name</th>
+            <th>Quantity</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.DateOfPurchase.ToString("MMMM")-@item.DateOfPurchase.Year</td>
+                <td>@item.ProductName.ProductName</td>
+
+                <td>@item.Quantity.Quantity</td>
+            </tr>
+        }
+    </table>
+</center>

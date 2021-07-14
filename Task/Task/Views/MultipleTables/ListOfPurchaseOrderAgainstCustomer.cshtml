@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Task.Models.CustomerProducts>
+@{ ViewBag.Title = "List Of Purchase Order Against Customer"; }
+<center>
+    <h2>
+        List of Purchase order against customer
+    </h2>
+    <br />
+    <br />
+    <table class="table table-bordered table-responsive table-hover table-striped">
+        <tr>
+            <th>Customer Name</th>
+            <th>POID</th>
+            <th>Product Name</th>
+            <th>Price</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+<tr>
+    <td>@item.CustomerName.CustomerName</td>
+    <td>@item.POID.POID</td>
+    <td>@item.ProductName.ProductName</td>
+    <td>@item.Price.Price</td>
+</tr>}
+    </table>
+</center>
